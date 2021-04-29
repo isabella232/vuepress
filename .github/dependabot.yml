@@ -1,0 +1,30 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  reviewers:
+  - bencodezen
+  labels:
+  - dependencies
+  ignore:
+  - dependency-name: "@types/node"
+    versions:
+    - 14.14.34
+    - 14.14.35
+    - 14.14.36
+    - 14.14.37
+    - 14.14.39
+  - dependency-name: textlint
+    versions:
+    - 11.8.2
+    - 11.8.3
+  - dependency-name: globby
+    versions:
+    - 11.0.2
+  commit-message:
+    prefix: fix
+    prefix-development: chore
+    include: scope
